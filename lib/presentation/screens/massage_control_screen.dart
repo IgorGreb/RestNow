@@ -24,6 +24,11 @@ class MassageControlScreenState extends State<MassageControlScreen> {
   late Timer _timer; // Оголошуємо таймер
   int _secondsRemaining = 30; // Стартовий час (наприклад 30 секунд)
   late MassageControlController mc;
+  @override
+  void initState() {
+    super.initState();
+    mc = MassageControlController(); // Initialize mc here
+  }
 
   void _startMassage() {
     setState(() {
